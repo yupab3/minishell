@@ -1,5 +1,5 @@
 # 프로젝트 명
-**minishell**
+**minishell** [subject](https://cdn.intra.42.fr/pdf/pdf/115374/en.subject.pdf)
 
 # 개발자
 **@jaejilee** *<jaejilee@student.42seoul.kr>*, **@dongyeuk** *<dongyeuk@student.42seoul.kr>*
