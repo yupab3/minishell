@@ -2,8 +2,7 @@
 **minishell**
 
 # 개발자
-**@jaejilee** *<jaejilee@student.42seoul.kr>* 
-**@dongyeuk** *<dongyeuk@student.42seoul.kr>*
+**@jaejilee** *<jaejilee@student.42seoul.kr>*, **@dongyeuk** *<dongyeuk@student.42seoul.kr>*
 
 # 분담
 - 공동 : 함수 공부, 자료구조 설계, 플로우차트 설계
