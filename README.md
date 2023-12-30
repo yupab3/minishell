@@ -1,5 +1,8 @@
 # 프로젝트 명
-**minishell**  [subject](https://cdn.intra.42.fr/pdf/pdf/115374/en.subject.pdf){:target="_blank"}
+**minishell**
+  
+[subject]([링크 URL](https://cdn.intra.42.fr/pdf/pdf/115374/en.subject.pdf)){:target="_blank"}
+
 
 # 개발자
 ![인어맨과 컵밥소년](https://github.com/yupab3/minishell/assets/100816515/e9788c80-4373-4e0d-b768-458cf6706e20)
