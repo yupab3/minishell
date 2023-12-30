@@ -3,6 +3,7 @@
 
 # 개발자
 **@jaejilee** *<jaejilee@student.42seoul.kr>*
+
 **@dongyeuk** *<dongyeuk@student.42seoul.kr>*
 
 # 분담
