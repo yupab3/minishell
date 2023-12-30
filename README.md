@@ -1,7 +1,8 @@
 # 프로젝트 명
-**minishell**  [subject](https://cdn.intra.42.fr/pdf/pdf/115374/en.subject.pdf)
+**minishell**  [subject](https://cdn.intra.42.fr/pdf/pdf/115374/en.subject.pdf){: target="_blank"}
 
 # 개발자
+![인어맨과 컵밥소년](https://github.com/yupab3/minishell/assets/100816515/7dad63ae-3517-4263-831e-cc5f624cf3cc)
 **@jaejilee** *<jaejilee@student.42seoul.kr>*, **@dongyeuk** *<dongyeuk@student.42seoul.kr>*
 
 # 분담
