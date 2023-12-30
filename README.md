@@ -1,4 +1,3 @@
-![image](https://github.com/yupab3/minishell/assets/39092976/ed53ae73-3fe2-4fbb-b1fa-29a477ecb501)# 프로젝트 명
 **<a href="https://cdn.intra.42.fr/pdf/pdf/115374/en.subject.pdf" target="_blank">minishell</a>**
 
 
