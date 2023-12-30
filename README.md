@@ -4,7 +4,9 @@
 # 개발자
 ![인어맨과 컵밥소년](https://github.com/yupab3/minishell/assets/100816515/e9788c80-4373-4e0d-b768-458cf6706e20)
   
-**@jaejilee** *<jaejilee@student.42seoul.kr>*, **@dongyeuk** *<dongyeuk@student.42seoul.kr>*
+**@jaejilee** *<jaejilee@student.42seoul.kr>*
+  
+**@dongyeuk** *<dongyeuk@student.42seoul.kr>*
 
 # 분담
 - 공동 : 함수 공부, 자료구조 설계, 플로우차트 설계
@@ -28,4 +30,4 @@
 - release    : 겁쟁이 버전
 - parsing    : 파싱 버전 (동엽)
 - executing  : 실행부 버전 (재진)
-- hotfix     : retry 사유 개선 버전
+- hotfix     : retry 이후 개선 버전
