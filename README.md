@@ -1,5 +1,5 @@
 # 프로젝트 명
-**minishell**  [subject](https://cdn.intra.42.fr/pdf/pdf/115374/en.subject.pdf){: target="_blank"}
+**minishell**  [subject](https://cdn.intra.42.fr/pdf/pdf/115374/en.subject.pdf){:target="_blank"}
 
 # 개발자
 ![인어맨과 컵밥소년](https://github.com/yupab3/minishell/assets/100816515/e9788c80-4373-4e0d-b768-458cf6706e20)
@@ -10,8 +10,8 @@
 
 # 분담
 - 공동 : 함수 공부, 자료구조 설계, 플로우차트 설계
-- 동엽 : 파싱 부분 구현
-- 재진 : 실행 부분 구현
+- 동엽 : 파싱 부분 구현, 포토샵
+- 재진 : 실행 부분 구현, readme 수정
 
 # 목표
 ### 프로젝트 목표
