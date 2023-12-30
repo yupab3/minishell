@@ -1,9 +1,8 @@
+# 과제명
 **<a href="https://cdn.intra.42.fr/pdf/pdf/115374/en.subject.pdf" target="_blank">minishell</a>**
 
-
-<a href="https://cdn.intra.42.fr/pdf/pdf/115374/en.subject.pdf" target="_parent">minishell</a>
 # 개발자
-![인어맨과 컵밥소년](https://github.com/yupab3/minishell/assets/100816515/e9788c80-4373-4e0d-b768-458cf6706e20)
+![미니쉘 최종본](https://github.com/yupab3/minishell/assets/100816515/0095e94a-f7ef-4eb4-a9e1-774f82f03968)
   
 **@jaejilee** *<jaejilee@student.42seoul.kr>*
   
