@@ -27,7 +27,7 @@ minishell
 
 # [브랜치]
 - main       : 최종 제출 버전
-- release    : 겁쟁이 버전
+- release    : 배포 버전
 - parsing    : 파싱 버전 (동엽)
 - executing  : 실행부 버전 (재진)
 - hotfix     : retry 이후 개선 버전
