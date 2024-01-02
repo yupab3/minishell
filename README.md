@@ -1,5 +1,5 @@
 # [과제명]
-**<a href="https://cdn.intra.42.fr/pdf/pdf/115374/en.subject.pdf" target="_blank">minishell</a>**
+minishell
 
 # [개발자]
 ![미니쉘 최종본](https://github.com/yupab3/minishell/assets/100816515/0095e94a-f7ef-4eb4-a9e1-774f82f03968)
@@ -34,4 +34,4 @@
 
 # [진행 상황]
 **2023.12.30**  과제 등록, git 공부, README 작성
-          
+**2024.01.02**  git 복습, 허용 함수 공부
