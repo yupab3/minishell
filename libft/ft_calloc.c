@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dongyeuk <dongyeuk@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: jaejilee <jaejilee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 08:15:22 by dongyeuk          #+#    #+#             */
-/*   Updated: 2023/10/10 16:22:13 by dongyeuk         ###   ########.fr       */
+/*   Updated: 2024/01/03 13:38:23 by jaejilee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,17 @@ void	*ft_calloc(size_t count, size_t size)
 	void	*ptr_mal_add;
 
 	if (size == 0 || count == 0)
-		return (malloc(0));
+	{
+		ptr_mal_add = malloc(0);
+		if (ptr_mal_add == 0)
+			exit(1);
+		return (ptr_mal_add);
+	}
 	if (size > SIZE_MAX / count)
-		return (0);
+		exit(1);
 	ptr_mal_add = malloc(count * size);
-	if (!ptr_mal_add)
-		return (0);
+	if (ptr_mal_add == 0)
+		exit(1);
 	ft_bzero(ptr_mal_add, count * size);
 	return (ptr_mal_add);
 }
