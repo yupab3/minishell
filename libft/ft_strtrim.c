@@ -6,7 +6,7 @@
 /*   By: dongyeuk <dongyeuk@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 10:19:17 by dongyeuk          #+#    #+#             */
-/*   Updated: 2023/10/10 16:25:10 by dongyeuk         ###   ########.fr       */
+/*   Updated: 2024/01/03 16:41:49 by dongyeuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	len = get_end_pos((unsigned char *)ptr_s1, needles, len);
 	if (start_pos > len)
 		return (ft_calloc(1, 1));
-	ans = (char *)ft_calloc(1, len - start_pos + 1);
-	if (!ans)
-		return (0);
+	ans = (char *)ft_calloc(len - start_pos + 1, 1);
 	ft_strlcpy(ans, ptr_s1 + start_pos, len - start_pos + 1);
 	return (ans);
 }
