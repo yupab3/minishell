@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dongyeuk <dongyeuk@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: jaejilee <jaejilee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 09:56:49 by dongyeuk          #+#    #+#             */
-/*   Updated: 2023/10/10 16:24:21 by dongyeuk         ###   ########.fr       */
+/*   Updated: 2024/01/03 16:31:54 by jaejilee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	total_len;
-	char	*joined_str;
+	char	*res;
+	size_t	s1_len;
+	size_t	s2_len;
 
-	total_len = ft_strlen(s1) + ft_strlen(s2) + 1;
-	joined_str = (char *)ft_calloc(1, total_len);
-	if (!joined_str)
-		return (0);
-	ft_strlcat(joined_str, (char *)s1, total_len);
-	ft_strlcat(joined_str, (char *)s2, total_len);
-	return (joined_str);
+	s1_len = ft_strlen(s1);
+	s2_len = ft_strlen(s2);
+	res = (char *)ft_calloc(s1_len + s2_len + 1, 1);
+	ft_strlcpy(res, (char *)s1, s1_len + 1);
+	ft_strlcpy(res + s1_len, (char *)s2, s2_len + 1);
+	return (res);
 }
