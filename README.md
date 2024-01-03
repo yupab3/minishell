@@ -32,6 +32,20 @@ minishell
 - executing  : 실행부 버전 (재진)
 - hotfix     : retry 이후 개선 버전
 
+# [규칙]
+### commit message
+- 변경 : "mod filename (details)"
+- 추가 : "add filename (details)"
+- 삭제 : "del filename (details)"
+- 긴급 : "fix filename (details)"
+
+### syntax rule
+- 변수 명	: 명사로 시작
+- 함수 명	: 동사로 시작
+- 매크로	: 용도별 접두어 통일
+- 파일 명	: 소속된 프로젝트 명칭 앞에 붙이기
+
 # [진행 상황]
 **2023.12.30**  과제 등록, git 공부, README 작성  
-**2024.01.02**  git 복습, 허용 함수 공부
+**2024.01.02**  git 복습, 허용 함수 정리  
+**2024.01.03**	허용 함수 정리 끝, libft 최적화, 스플래툰3 1승쫑, 동물의 숲 눈사람 만들기
