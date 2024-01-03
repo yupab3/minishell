@@ -6,7 +6,7 @@
 /*   By: dongyeuk <dongyeuk@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 15:11:18 by dongyeuk          #+#    #+#             */
-/*   Updated: 2023/10/10 16:24:59 by dongyeuk         ###   ########.fr       */
+/*   Updated: 2024/01/03 16:31:29 by dongyeuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	idx = 0;
 	ans = (char *)ft_calloc(1, ft_strlen(s) + 1);
-	if (!ans)
-		return (0);
 	while (*(s + idx) != 0)
 	{
 		*(ans + idx) = f(idx, *(s + idx));
