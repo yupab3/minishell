@@ -6,7 +6,7 @@
 /*   By: dongyeuk <dongyeuk@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 11:33:55 by dongyeuk          #+#    #+#             */
-/*   Updated: 2023/10/10 16:24:13 by dongyeuk         ###   ########.fr       */
+/*   Updated: 2024/01/03 16:51:12 by dongyeuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,9 @@ static size_t	count_words(char const *s, char c)
 
 static int	malloc_word(char **ans, char *s, char *start_ptr, size_t word_idx)
 {
-	ans[word_idx] = (char *)malloc(s - start_ptr + 1);
-	if (!ans[word_idx])
-		return (0);
+	ans[word_idx] = (char *)ft_calloc(s - start_ptr + 1, 1);
 	ft_strlcpy(ans[word_idx], start_ptr, s - start_ptr + 1);
-	return (1);
+	return (TRUE);
 }
 
 static int	split_words(char **ans, char *s, char c, size_t count)
@@ -86,9 +84,7 @@ char	**ft_split(char const *s, char c)
 	size_t	result_count;
 
 	count = count_words(s, c);
-	ans = (char **)malloc(sizeof(char *) * (count + 1));
-	if (!ans)
-		return (0);
+	ans = (char **)ft_calloc(count + 1, sizeof(char *));
 	result_count = split_words(ans, (char *)s, c, count);
 	if (result_count != count)
 	{
@@ -96,7 +92,7 @@ char	**ft_split(char const *s, char c)
 		while (i < result_count)
 			free(ans[i++]);
 		free(ans);
-		return (0);
+		return (FALSE);
 	}
 	ans[count] = 0;
 	return (ans);

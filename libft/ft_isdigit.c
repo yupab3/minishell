@@ -6,7 +6,7 @@
 /*   By: dongyeuk <dongyeuk@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 20:27:58 by dongyeuk          #+#    #+#             */
-/*   Updated: 2023/10/10 16:22:58 by dongyeuk         ###   ########.fr       */
+/*   Updated: 2024/01/03 16:46:23 by dongyeuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
-		return (1);
-	return (0);
+		return (TRUE);
+	return (FALSE);
 }

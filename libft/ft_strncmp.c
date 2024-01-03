@@ -6,7 +6,7 @@
 /*   By: dongyeuk <dongyeuk@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 20:56:16 by dongyeuk          #+#    #+#             */
-/*   Updated: 2023/10/10 16:25:02 by dongyeuk         ###   ########.fr       */
+/*   Updated: 2024/01/03 16:53:07 by dongyeuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ int	ft_strncmp(char *s1, char *s2, size_t n)
 			return ((size_t)(ptr_s1[idx] - ptr_s2[idx]));
 		idx++;
 	}
-	return (0);
+	return (FALSE);
 }

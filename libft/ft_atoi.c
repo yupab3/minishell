@@ -6,7 +6,7 @@
 /*   By: dongyeuk <dongyeuk@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 21:52:04 by dongyeuk          #+#    #+#             */
-/*   Updated: 2024/01/03 16:04:21 by dongyeuk         ###   ########.fr       */
+/*   Updated: 2024/01/03 16:45:03 by dongyeuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,11 @@ int	ft_atoi(const char *nptr, int *ans)
 	{
 		acc = acc * 10 + *nptr - '0';
 		if (acc > max_num || (acc == (max_num / 10) && *(nptr + 1) > lim_num))
-			return (FAILURE);
+			return (FALSE);
 		nptr++;
 	}
 	if (*nptr != 0)
-		return (FAILURE);
+		return (FALSE);
 	*ans = sign * acc;
-	return (SUCCESS);
+	return (TRUE);
 }

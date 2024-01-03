@@ -6,7 +6,7 @@
 /*   By: dongyeuk <dongyeuk@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 19:10:04 by dongyeuk          #+#    #+#             */
-/*   Updated: 2023/10/10 16:24:15 by dongyeuk         ###   ########.fr       */
+/*   Updated: 2024/01/03 16:52:44 by dongyeuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ char	*ft_strchr(const char *s, int c)
 	}
 	if (ch_c == '\0')
 		return (ptr_s);
-	return (0);
+	return (FALSE);
 }
