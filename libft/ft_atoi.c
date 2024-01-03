@@ -6,51 +6,46 @@
 /*   By: dongyeuk <dongyeuk@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 21:52:04 by dongyeuk          #+#    #+#             */
-/*   Updated: 2023/10/10 16:21:58 by dongyeuk         ###   ########.fr       */
+/*   Updated: 2024/01/03 16:04:21 by dongyeuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*check_space(char *str)
+static void	ft_paraset(unsigned long *max_num, int *lim_num, int sign, \
+						unsigned long *acc)
 {
-	while (*str == ' ' || (*str >= 9 && *str <= 13))
-		str++;
-	return (str);
+	int	size;
+
+	*acc = 0;
+	size = sizeof(int) * sizeof(void *);
+	*max_num = (sign) * ((unsigned int)1 << (size - 1)) - (sign > 0);
+	*lim_num = (*max_num % 10) + '0';
 }
 
-static char	*check_sign(char *str, int *minus, int *sign)
+int	ft_atoi(const char *nptr, int *ans)
 {
-	while (*str == '-' || *str == '+')
-	{
-		if (*str == '-')
-			*minus = *minus * -1;
-		str++;
-		*sign = *sign + 1;
-	}
-	return (str);
-}
+	unsigned long	acc;
+	unsigned long	max_num;
+	int				lim_num;
+	int				sign;
 
-int	ft_atoi(const char *str)
-{
-	int		minus;
-	int		sign;
-	int		num;
-	char	*ptr_str;
-
-	ptr_str = (char *)str;
-	minus = 1;
-	sign = 0;
-	ptr_str = check_space(ptr_str);
-	ptr_str = check_sign(ptr_str, &minus, &sign);
-	if (sign > 1)
-		return (0);
-	num = 0;
-	while (*ptr_str >= '0' && *ptr_str <= '9')
+	sign = 1;
+	while (*nptr == ' ' || (9 <= *nptr && *nptr <= 13))
+		nptr++;
+	if (*nptr == '-' || *nptr == '+')
+		if (*nptr++ == '-')
+			sign *= -1;
+	ft_paraset(&max_num, &lim_num, sign, &acc);
+	while ('0' <= *nptr && *nptr <= '9')
 	{
-		num *= 10;
-		num += *ptr_str - '0';
-		ptr_str++;
+		acc = acc * 10 + *nptr - '0';
+		if (acc > max_num || (acc == (max_num / 10) && *(nptr + 1) > lim_num))
+			return (FAILURE);
+		nptr++;
 	}
-	return (num * minus);
+	if (*nptr != 0)
+		return (FAILURE);
+	*ans = sign * acc;
+	return (SUCCESS);
 }
