@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_err.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaejilee <jaejilee@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: dongyeuk <dongyeuk@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 14:20:49 by dongyeuk          #+#    #+#             */
-/*   Updated: 2024/01/03 15:12:06 by jaejilee         ###   ########.fr       */
+/*   Updated: 2024/01/03 16:06:34 by dongyeuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	_error(char *msg)
 {
 	write(2, msg, ft_strlen(msg));
-	exit(1);
+	exit(FAILURE);
 }
