@@ -45,8 +45,47 @@ minishell
 - 매크로	: 용도별 접두어 통일
 - 파일 명	: 소속된 프로젝트 명칭 앞에 붙이기
 
+### terminal symbol
+```
+"alphabet" ::= 'a', 'b', ..., 'z', 'A', 'B', ..., 'Z'
+"digit" ::= '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'
+"constant" ::= ['-'] "digit" {"digit"}
+"under_bar" ::= '_'
+"variable" ::= "alphabet" | "under_bar" {"digit" | "alphabet" | "under_bar"}
+"logical_op" ::= "||" | "&&"
+"pipe" ::= '|'
+"l_paren" ::= '('
+"r_paren" ::= ')'
+"re_direct" ::= '<' | '>' | ">>"
+"here_doc" ::= "<<"
+"hyphen" ::= '-'
+"quotes" ::= '\'' | '\"'
+"dollar" ::= '$'
+"exclamation_mark" ::= '!'
+"question_mark" ::= '?'
+"wild_card" ::= '*'
+"special_mark" ::= 33~47, 58~64, 91~96, 123~126
+"division" ::= ' ' | '\t'
+```
+
+### non-terminal symbol
+```
+<DATA> ::=	<CMD>"pipe"<DATA>
+			| <CMD><REDIRECT><DATA>
+			| <CMD><HERE_DOC><DATA>
+			| <CMD>
+  
+<REDIRECT> ::= "re_direct"<FILENAME>
+<HERE_DOC> ::= "here_doc"<LIMITER>
+  
+<CMD> ::= <PARAM> | <PARAM><CMD>
+<PARAM> ::= {"alphabet"}
+<FILENAME> ::= {"alphabet" | "digit" | "special_mark"}
+<LIMITER> ::= {"alphabet" | "digit" | "special_mark"}
+```
+
 # [진행 상황]
 **2023.12.30**  과제 등록, git 공부, README 작성  
 **2024.01.02**  git 복습, 허용 함수 정리  
 **2024.01.03**	libft 최적화, 규칙 정립, 자료구조 선택(이진트리)  
-**2024.01.05**	파싱 자료구조, 구조체 만들기, CFG 문법(BNF 표현법) 공부
+**2024.01.05**	파싱 자료구조, 구조체 만들기, CFG 문법(BNF 표현법) 공부  
