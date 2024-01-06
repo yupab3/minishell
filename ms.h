@@ -6,7 +6,7 @@
 /*   By: dongyeuk <dongyeuk@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 14:16:32 by dongyeuk          #+#    #+#             */
-/*   Updated: 2024/01/03 16:22:45 by dongyeuk         ###   ########.fr       */
+/*   Updated: 2024/01/06 13:18:55 by dongyeuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,28 @@
 # include <sys/ioctl.h>
 # include <termios.h>
 # include <curses.h>
+
+typedef enum e_symbol
+{
+	CMD,		// 0
+	LOGICAL_OP,	// 1
+	PIPE,		// 2
+	REDIRECT,	// 3
+	HERE_DOC	// 4
+}			t_symbol;
+
+typedef struct s_data
+{
+	t_symbol	*symbol;
+	char		*content;
+}			   t_data;
+
+typedef struct s_tree
+{
+	t_data			data;
+	struct s_tree	*left;
+	struct s_tree	*right;
+}			   t_tree;
 
 /* STATUS MACRO */
 # define FAILURE	(1)
