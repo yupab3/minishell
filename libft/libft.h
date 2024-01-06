@@ -6,11 +6,12 @@
 /*   By: dongyeuk <dongyeuk@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 17:21:50 by dongyeuk          #+#    #+#             */
-/*   Updated: 2024/01/03 16:20:46 by dongyeuk         ###   ########.fr       */
+/*   Updated: 2024/01/06 16:27:49 by dongyeuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
+# define LIBFT_H
 # include <unistd.h>
 # include <stdlib.h>
 # include "../ms.h"
