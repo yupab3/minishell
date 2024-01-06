@@ -6,7 +6,7 @@
 /*   By: dongyeuk <dongyeuk@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 14:16:32 by dongyeuk          #+#    #+#             */
-/*   Updated: 2024/01/06 13:18:55 by dongyeuk         ###   ########.fr       */
+/*   Updated: 2024/01/06 13:37:19 by dongyeuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 # define MS_H
 
 # include "./libft/libft.h"
-# include <readline/readline.h>
-# include <readline/history.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <signal.h>
@@ -28,6 +26,8 @@
 # include <sys/ioctl.h>
 # include <termios.h>
 # include <curses.h>
+# include <readline/readline.h>
+# include <readline/history.h>
 
 typedef enum e_symbol
 {
@@ -54,10 +54,6 @@ typedef struct s_tree
 /* STATUS MACRO */
 # define FAILURE	(1)
 # define SUCCESS	(0)
-
-/* EXCUTE MACRO */
-# define TRUE		(1)
-# define FALSE		(0)
 
 /* EXIT_STATUS MACRO */
 # define ERR_COMMON	(1)
