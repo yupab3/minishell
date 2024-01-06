@@ -6,7 +6,7 @@
 /*   By: dongyeuk <dongyeuk@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 14:16:32 by dongyeuk          #+#    #+#             */
-/*   Updated: 2024/01/06 13:37:19 by dongyeuk         ###   ########.fr       */
+/*   Updated: 2024/01/06 15:49:00 by dongyeuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,8 @@ typedef struct s_tree
 # define ERR_COMMON	(1)
 # define ERR_EXCUTE	(126)
 # define ERR_CMD	(127)
+
+/* ms_signal.c */
+void	handle_ctrl_c(int signum);
 
 #endif
