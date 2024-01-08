@@ -6,7 +6,7 @@
 /*   By: jaejilee <jaejilee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 12:26:10 by jaejilee          #+#    #+#             */
-/*   Updated: 2024/01/08 20:10:03 by jaejilee         ###   ########.fr       */
+/*   Updated: 2024/01/08 20:18:39 by jaejilee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	is_nflag(char *s);
 
-void	ms_echo(t_data *d)
+int	ms_echo(t_data *d)
 {
 	int	i;
 	int	nl_flag;
@@ -29,6 +29,7 @@ void	ms_echo(t_data *d)
 		ft_putstr_fd(d->content[i++], 1);
 	if (nl_flag == TRUE)
 		printf("\n");
+	return (SUCCESS);
 }
 
 static int	is_nflag(char *s)
