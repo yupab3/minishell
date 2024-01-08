@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ms.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaejilee <jaejilee@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: dongyeuk <dongyeuk@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 14:16:32 by dongyeuk          #+#    #+#             */
-/*   Updated: 2024/01/08 14:16:17 by jaejilee         ###   ########.fr       */
+/*   Updated: 2024/01/08 16:15:45 by dongyeuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ typedef enum e_io
 typedef enum e_symbol
 {
 	CMD,
+	BUILTIN_CMD;
 	LOGICAL_OP,
 	PIPE
 }	t_symbol;
