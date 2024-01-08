@@ -6,13 +6,13 @@
 /*   By: dongyeuk <dongyeuk@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 13:44:26 by dongyeuk          #+#    #+#             */
-/*   Updated: 2024/01/06 15:49:06 by dongyeuk         ###   ########.fr       */
+/*   Updated: 2024/01/08 19:57:36 by dongyeuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ms.h"
 
-int	main(void)
+int	main(int argc, char **argv, char **envp)
 {
 	char	*str;
 
