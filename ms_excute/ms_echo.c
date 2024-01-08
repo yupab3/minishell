@@ -6,30 +6,40 @@
 /*   By: jaejilee <jaejilee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 12:26:10 by jaejilee          #+#    #+#             */
-/*   Updated: 2024/01/08 17:05:17 by jaejilee         ###   ########.fr       */
+/*   Updated: 2024/01/08 18:56:08 by jaejilee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ms.h"
+
+static int	is_nflag(char *s);
 
 void	ms_echo(t_data *d)
 {
 	int	i;
 	int	nl_flag;
 
-	if (d->content[1] != NULL && ft_strlen(d->content[1]) == 2
-		&& ft_strncmp(d->content[2], "-n", 2) == 0)
-	{
-		i = 1;
-		nl_flag = TRUE;
-	}
-	else
-	{
-		i = 0;
+	nl_flag = TRUE;
+	i = 1;
+	while (d->content[i] != NULL && is_nflag(d->content[i]) == TRUE)
+		i++;
+	if (i > 1)
 		nl_flag = FALSE;
-	}
-	while (d->content[++i] != 0)
-		printf("%s ", d->content[i]);
-	if (nl_flag == FALSE)
+	while (d->content[i] != NULL && d->content[i] != 0)
+		printf("%s ", d->content[i++]);
+	if (nl_flag == TRUE)
 		printf("\n");
+}
+
+static int	is_nflag(char *s)
+{
+	int	i;
+
+	if (s[0] != '-')
+		return (FALSE);
+	i = 0;
+	while (s[++i] != 0)
+		if (s[i] != 'n')
+			return (FALSE);
+	return (TRUE);
 }
