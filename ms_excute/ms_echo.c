@@ -6,7 +6,7 @@
 /*   By: jaejilee <jaejilee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 12:26:10 by jaejilee          #+#    #+#             */
-/*   Updated: 2024/01/08 18:56:08 by jaejilee         ###   ########.fr       */
+/*   Updated: 2024/01/08 20:10:03 by jaejilee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ms_echo(t_data *d)
 	if (i > 1)
 		nl_flag = FALSE;
 	while (d->content[i] != NULL && d->content[i] != 0)
-		printf("%s ", d->content[i++]);
+		ft_putstr_fd(d->content[i++], 1);
 	if (nl_flag == TRUE)
 		printf("\n");
 }
