@@ -6,7 +6,7 @@
 /*   By: dongyeuk <dongyeuk@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 14:16:32 by dongyeuk          #+#    #+#             */
-/*   Updated: 2024/01/08 16:15:45 by dongyeuk         ###   ########.fr       */
+/*   Updated: 2024/01/09 14:37:21 by dongyeuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ typedef enum e_io
 typedef enum e_symbol
 {
 	CMD,
-	BUILTIN_CMD;
+	BUILTIN_CMD,
 	LOGICAL_OP,
 	PIPE
 }	t_symbol;
@@ -80,7 +80,31 @@ typedef struct s_tree
 	struct s_tree	*right;
 }	t_tree;
 
+/* env list */
+typedef struct s_env
+{
+	char			*name;
+	char			*data;
+	struct s_env	*next;
+}	t_env;
+
+/* data set */
+typedef struct s_data_set
+{
+	t_tree	*tree;
+	t_env	*env_list;
+}	t_data_set;
+
 /* ms_signal.c */
-void	handle_ctrl_c(int signum);
+void	init_data(t_data_set **ds, char **envp);
+
+/* ./ms_parse/ms_err_exit */
+void	exit_with_msg(char *msg);
+
+/* ./ms_parse/ms_rl_base.c */
+void	ft_rl_new_line(t_data_set *ds);
+
+/* ./ms_parse/ms_init_tree.c */
+t_tree	*create_tree(void);
 
 #endif
