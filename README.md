@@ -1,6 +1,6 @@
-# [과제명]
-minishell
-
+# [프로젝트 개요]
+- 과제명 :	minishell
+- 팀 이름 :	Pizza 🍕 & Beer 🍻
 # [개발자]
 ![미니쉘 최종본](https://github.com/yupab3/minishell/assets/100816515/0095e94a-f7ef-4eb4-a9e1-774f82f03968)
   
@@ -96,4 +96,4 @@ minishell
 **2024.01.03**	libft 최적화, 규칙 정립, 자료구조 선택(이진트리)  
 **2024.01.05**	파싱 자료구조, 구조체 만들기, CFG 문법(BNF 표현법) 공부  
 **2024.01.06**	main 함수 작성, 트리 구조 만들기, Makefile 만들기  
-**2024.01.08**	parsing, excuting 브랜치에 각자 구현 시작  
+**2024.01.08~**	parsing, excuting 브랜치에 각자 구현 시작  
