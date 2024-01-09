@@ -6,7 +6,7 @@
 /*   By: dongyeuk <dongyeuk@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 14:16:32 by dongyeuk          #+#    #+#             */
-/*   Updated: 2024/01/08 16:24:37 by dongyeuk         ###   ########.fr       */
+/*   Updated: 2024/01/09 12:05:02 by dongyeuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,21 @@ typedef struct s_tree
 	struct s_tree	*left;
 	struct s_tree	*right;
 }	t_tree;
+
+/* env list */
+typedef struct s_env
+{
+	char			*name;
+	char			*data;
+	struct s_env	*next;
+}	t_env;
+
+/* data set */
+typedef struct s_data_set
+{
+	t_tree	*tree;
+	t_env	*env_list;
+}	t_data_set;
 
 /* ms_signal.c */
 void	handle_ctrl_c(int signum);
