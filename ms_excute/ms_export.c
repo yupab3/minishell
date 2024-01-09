@@ -6,7 +6,7 @@
 /*   By: jaejilee <jaejilee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 13:35:32 by jaejilee          #+#    #+#             */
-/*   Updated: 2024/01/09 15:46:00 by jaejilee         ###   ########.fr       */
+/*   Updated: 2024/01/09 15:56:27 by jaejilee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,6 @@ static void	add_env_data(t_env *env, t_env *new)
 	if (env == 0)
 	{
 		env = new;
-		return ;
 	}
 	i = 0;
 	while ((env + i)->name != new->name && (env + i)->next != NULL)
