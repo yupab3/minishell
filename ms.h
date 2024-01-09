@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ms.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dongyeuk <dongyeuk@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: jaejilee <jaejilee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 14:16:32 by dongyeuk          #+#    #+#             */
-/*   Updated: 2024/01/08 16:15:45 by dongyeuk         ###   ########.fr       */
+/*   Updated: 2024/01/09 19:27:44 by jaejilee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ typedef enum e_io
 typedef enum e_symbol
 {
 	CMD,
-	BUILTIN_CMD;
+	BUILTIN_CMD,
 	LOGICAL_OP,
 	PIPE
 }	t_symbol;
@@ -80,7 +80,30 @@ typedef struct s_tree
 	struct s_tree	*right;
 }	t_tree;
 
+/* env list */
+typedef struct s_env
+{
+	char			*name;
+	char			*data;
+	struct s_env	*next;
+}	t_env;
+
+/* data set */
+typedef struct s_data_set
+{
+	t_tree	*tree;
+	t_env	*env_list;
+	int		exitcode;
+}	t_data_set;
+
 /* ms_signal.c */
 void	handle_ctrl_c(int signum);
+
+/* ./ms_excute/ms_echo.c */
+int		ms_echo(t_data *d);
+int		ms_cd(t_data *d, char **pwd);
+int		ms_pwd(char *pwd);
+int		ms_export(t_data *d, t_env *env);
+void	ms_exit(int exitcode);
 
 #endif
