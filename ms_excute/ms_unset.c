@@ -6,7 +6,7 @@
 /*   By: jaejilee <jaejilee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 16:00:23 by jaejilee          #+#    #+#             */
-/*   Updated: 2024/01/09 17:54:16 by jaejilee         ###   ########.fr       */
+/*   Updated: 2024/01/09 18:23:29 by jaejilee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int	ms_unset(t_data *d, t_env *env)
 		else
 			del_back_env(d, env, i);
 	}
+	return (SUCCESS);
 }
 
 static void	del_first_env(t_env *env)
