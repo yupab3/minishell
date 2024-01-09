@@ -6,7 +6,7 @@
 /*   By: jaejilee <jaejilee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 13:35:32 by jaejilee          #+#    #+#             */
-/*   Updated: 2024/01/09 15:35:58 by jaejilee         ###   ########.fr       */
+/*   Updated: 2024/01/09 15:46:00 by jaejilee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int	ms_export(t_data *d, t_env *env)
 			new_env = (t_env *)ft_calloc(1, sizeof(t_env));
 			new_env->name = dup_name(d->content[i], loc_equal);
 			new_env->data = dup_data(d->content[i], loc_equal);
+			new_env->next = NULL;
 			add_env_data(env, new_env);
 		}
 	}
@@ -99,6 +100,11 @@ static void	add_env_data(t_env *env, t_env *new)
 {
 	int	i;
 
+	if (env == 0)
+	{
+		env = new;
+		return ;
+	}
 	i = 0;
 	while ((env + i)->name != new->name && (env + i)->next != NULL)
 		i++;
